@@ -31,17 +31,23 @@ class Listener extends QueryListener {
     console.log({ node });
   }
 
-  enterValue(ctx: typeof QueryParser.ValueContext) {
-    const number = ctx.Number();
-    if (number) {
-      return this.stack.push(parseFloat(number.getText()));
+  enterPushExpression(ctx) {
+    const wordNode = ctx.Word();
+    const numberNode = ctx.Number();
+
+    console.log({ ctx });
+
+    if (wordNode) {
+      this.stack.push(this.getVariable(wordNode.getText()));
     }
 
-    this.stack.push(this.getVariable(ctx.Word().getText()));
+    if (numberNode) {
+      this.stack.push(parseFloat(numberNode.getText()));
+    }
   }
 
   exitJoinExpression(ctx: typeof QueryParser.JoinExpressionContext) {
-    const callback = operatorMap[ctx.operator().getText()];
+    const callback = operatorMap[ctx.operation.text];
     if (typeof callback === "undefined") {
       return;
     }
@@ -49,6 +55,26 @@ class Listener extends QueryListener {
     const right = this.stack.pop();
     const left = this.stack.pop();
     this.stack.push(callback(left, right));
+  }
+
+  exitFunctionExpression(ctx: typeof QueryParser.FunctionExpressionContext) {
+    const functionContext = ctx.functionCall();
+    const functionName = functionContext.Word().getText();
+
+    const args: any[] = [];
+    // This will be empty if there are no arguments defined in function
+    const argumentsCount = functionContext?.arguments()?.expression().length || 0;
+    for (let i = 0; i < argumentsCount; i++) {
+      args.unshift(this.stack.pop());
+    }
+
+    switch (functionName) {
+      case "SUM":
+        this.stack.push(args.reduce((current, item) => current + item, 0));
+        break;
+      default:
+        throw new Error("Undefined function " + functionName);
+    }
   }
 }
 

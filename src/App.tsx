@@ -39,6 +39,12 @@ function App() {
           <li>
             Variables: <code>a + b</code>
           </li>
+          <li>
+            Functions: <code>SUM(1, 1)</code>
+          </li>
+          <li>
+            Nested Functions: <code>SUM(1, SUM(1 + 1)) + SUM(a, b)</code>
+          </li>
         </ul>
       </div>
       <div className="my-5">

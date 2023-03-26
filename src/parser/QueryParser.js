@@ -5,32 +5,43 @@ import QueryListener from "./QueryListener.js";
 
 const serializedATN = [
   "\u0003\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786",
-  "\u5964\u0003\t*\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004",
-  "\t\u0004\u0004\u0005\t\u0005\u0003\u0002\u0003\u0002\u0003\u0002\u0003",
+  "\u5964\u0003\f<\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004",
+  "\t\u0004\u0004\u0005\t\u0005\u0004\u0006\t\u0006\u0003\u0002\u0003\u0002",
+  "\u0003\u0002\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0005\u0003\u0018\n\u0003\u0003",
   "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-  "\u0003\u0003\u0003\u0003\u0003\u0005\u0003\u0017\n\u0003\u0003\u0003",
-  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003",
-  "\u0003\u0003\u0007\u0003!\n\u0003\f\u0003\u000e\u0003$\u000b\u0003\u0003",
-  "\u0004\u0003\u0004\u0003\u0005\u0003\u0005\u0003\u0005\u0002\u0003\u0004",
-  "\u0006\u0002\u0004\u0006\b\u0002\u0004\u0003\u0002\u0007\b\u0003\u0002",
-  "\u0005\u0006\u0002(\u0002\n\u0003\u0002\u0002\u0002\u0004\u0016\u0003",
-  "\u0002\u0002\u0002\u0006%\u0003\u0002\u0002\u0002\b'\u0003\u0002\u0002",
-  "\u0002\n\u000b\u0005\u0004\u0003\u0002\u000b\f\u0007\u0002\u0002\u0003",
-  "\f\u0003\u0003\u0002\u0002\u0002\r\u000e\b\u0003\u0001\u0002\u000e\u000f",
-  "\u0005\u0006\u0004\u0002\u000f\u0010\u0005\b\u0005\u0002\u0010\u0011",
-  "\u0005\u0006\u0004\u0002\u0011\u0017\u0003\u0002\u0002\u0002\u0012\u0013",
-  "\u0007\u0003\u0002\u0002\u0013\u0014\u0005\u0004\u0003\u0002\u0014\u0015",
-  "\u0007\u0004\u0002\u0002\u0015\u0017\u0003\u0002\u0002\u0002\u0016\r",
-  '\u0003\u0002\u0002\u0002\u0016\u0012\u0003\u0002\u0002\u0002\u0017"',
-  "\u0003\u0002\u0002\u0002\u0018\u0019\f\u0005\u0002\u0002\u0019\u001a",
-  "\u0005\b\u0005\u0002\u001a\u001b\u0005\u0004\u0003\u0006\u001b!\u0003",
-  "\u0002\u0002\u0002\u001c\u001d\f\u0004\u0002\u0002\u001d\u001e\u0005",
-  "\b\u0005\u0002\u001e\u001f\u0005\u0006\u0004\u0002\u001f!\u0003\u0002",
-  "\u0002\u0002 \u0018\u0003\u0002\u0002\u0002 \u001c\u0003\u0002\u0002",
-  '\u0002!$\u0003\u0002\u0002\u0002" \u0003\u0002\u0002\u0002"#\u0003',
-  '\u0002\u0002\u0002#\u0005\u0003\u0002\u0002\u0002$"\u0003\u0002\u0002',
-  "\u0002%&\t\u0002\u0002\u0002&\u0007\u0003\u0002\u0002\u0002'(\t\u0003",
-  '\u0002\u0002(\t\u0003\u0002\u0002\u0002\u0005\u0016 "',
+  "\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0003\u0007",
+  "\u0003&\n\u0003\f\u0003\u000e\u0003)\u000b\u0003\u0003\u0004\u0003\u0004",
+  "\u0003\u0004\u0007\u0004.\n\u0004\f\u0004\u000e\u00041\u000b\u0004\u0003",
+  "\u0005\u0003\u0005\u0003\u0005\u0005\u00056\n\u0005\u0003\u0005\u0003",
+  "\u0005\u0003\u0006\u0003\u0006\u0003\u0006\u0002\u0003\u0004\u0007\u0002",
+  "\u0004\u0006\b\n\u0002\u0003\u0003\u0002\n\u000b\u0002?\u0002\f\u0003",
+  "\u0002\u0002\u0002\u0004\u0017\u0003\u0002\u0002\u0002\u0006*\u0003",
+  "\u0002\u0002\u0002\b2\u0003\u0002\u0002\u0002\n9\u0003\u0002\u0002\u0002",
+  "\f\r\u0005\u0004\u0003\u0002\r\u000e\u0007\u0002\u0002\u0003\u000e\u0003",
+  "\u0003\u0002\u0002\u0002\u000f\u0010\b\u0003\u0001\u0002\u0010\u0011",
+  "\u0007\u0003\u0002\u0002\u0011\u0012\u0005\u0004\u0003\u0002\u0012\u0013",
+  "\u0007\u0004\u0002\u0002\u0013\u0018\u0003\u0002\u0002\u0002\u0014\u0018",
+  "\u0005\b\u0005\u0002\u0015\u0018\u0007\u000b\u0002\u0002\u0016\u0018",
+  "\u0007\n\u0002\u0002\u0017\u000f\u0003\u0002\u0002\u0002\u0017\u0014",
+  "\u0003\u0002\u0002\u0002\u0017\u0015\u0003\u0002\u0002\u0002\u0017\u0016",
+  "\u0003\u0002\u0002\u0002\u0018'\u0003\u0002\u0002\u0002\u0019\u001a",
+  "\f\t\u0002\u0002\u001a\u001b\u0007\u0005\u0002\u0002\u001b&\u0005\u0004",
+  "\u0003\n\u001c\u001d\f\b\u0002\u0002\u001d\u001e\u0007\u0006\u0002\u0002",
+  "\u001e&\u0005\u0004\u0003\t\u001f \f\u0007\u0002\u0002 !\u0007\u0007",
+  '\u0002\u0002!&\u0005\u0004\u0003\b"#\f\u0006\u0002\u0002#$\u0007\b',
+  "\u0002\u0002$&\u0005\u0004\u0003\u0007%\u0019\u0003\u0002\u0002\u0002",
+  '%\u001c\u0003\u0002\u0002\u0002%\u001f\u0003\u0002\u0002\u0002%"\u0003',
+  "\u0002\u0002\u0002&)\u0003\u0002\u0002\u0002'%\u0003\u0002\u0002\u0002",
+  "'(\u0003\u0002\u0002\u0002(\u0005\u0003\u0002\u0002\u0002)'\u0003",
+  "\u0002\u0002\u0002*/\u0005\u0004\u0003\u0002+,\u0007\t\u0002\u0002,",
+  ".\u0005\u0004\u0003\u0002-+\u0003\u0002\u0002\u0002.1\u0003\u0002\u0002",
+  "\u0002/-\u0003\u0002\u0002\u0002/0\u0003\u0002\u0002\u00020\u0007\u0003",
+  "\u0002\u0002\u00021/\u0003\u0002\u0002\u000223\u0007\u000b\u0002\u0002",
+  "35\u0007\u0003\u0002\u000246\u0005\u0006\u0004\u000254\u0003\u0002\u0002",
+  "\u000256\u0003\u0002\u0002\u000267\u0003\u0002\u0002\u000278\u0007\u0004",
+  "\u0002\u00028\t\u0003\u0002\u0002\u00029:\t\u0002\u0002\u0002:\u000b",
+  "\u0003\u0002\u0002\u0002\u0007\u0017%'/5",
 ].join("");
 
 const atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -41,9 +52,9 @@ const sharedContextCache = new antlr4.PredictionContextCache();
 
 export default class QueryParser extends antlr4.Parser {
   static grammarFileName = "Query.g4";
-  static literalNames = [null, "'('", "')'", "'+'", "'-'"];
-  static symbolicNames = [null, null, null, "Plus", "Minus", "Number", "Word", "SPACE"];
-  static ruleNames = ["query", "expression", "value", "operator"];
+  static literalNames = [null, "'('", "')'", "'*'", "'/'", "'+'", "'-'", "','"];
+  static symbolicNames = [null, null, null, null, null, null, null, null, "Number", "Word", "SPACE"];
+  static ruleNames = ["query", "expression", "arguments", "functionCall", "value"];
 
   constructor(input) {
     super(input);
@@ -69,9 +80,13 @@ export default class QueryParser extends antlr4.Parser {
   expression_sempred(localctx, predIndex) {
     switch (predIndex) {
       case 0:
-        return this.precpred(this._ctx, 3);
+        return this.precpred(this._ctx, 7);
       case 1:
-        return this.precpred(this._ctx, 2);
+        return this.precpred(this._ctx, 6);
+      case 2:
+        return this.precpred(this._ctx, 5);
+      case 3:
+        return this.precpred(this._ctx, 4);
       default:
         throw "No predicate with index:" + predIndex;
     }
@@ -82,9 +97,9 @@ export default class QueryParser extends antlr4.Parser {
     this.enterRule(localctx, 0, QueryParser.RULE_query);
     try {
       this.enterOuterAlt(localctx, 1);
-      this.state = 8;
+      this.state = 10;
       this.expression(0);
-      this.state = 9;
+      this.state = 11;
       this.match(QueryParser.EOF);
     } catch (re) {
       if (re instanceof antlr4.error.RecognitionException) {
@@ -112,38 +127,49 @@ export default class QueryParser extends antlr4.Parser {
     this.enterRecursionRule(localctx, 2, QueryParser.RULE_expression, _p);
     try {
       this.enterOuterAlt(localctx, 1);
-      this.state = 20;
+      this.state = 21;
       this._errHandler.sync(this);
-      switch (this._input.LA(1)) {
-        case QueryParser.Number:
-        case QueryParser.Word:
-          localctx = new JoinExpressionContext(this, localctx);
-          this._ctx = localctx;
-          _prevctx = localctx;
-
-          this.state = 12;
-          this.value();
-          this.state = 13;
-          this.operator();
-          this.state = 14;
-          this.value();
-          break;
-        case QueryParser.T__0:
+      var la_ = this._interp.adaptivePredict(this._input, 0, this._ctx);
+      switch (la_) {
+        case 1:
           localctx = new EmbedExpressionContext(this, localctx);
           this._ctx = localctx;
           _prevctx = localctx;
-          this.state = 16;
+
+          this.state = 14;
           this.match(QueryParser.T__0);
-          this.state = 17;
+          this.state = 15;
           this.expression(0);
-          this.state = 18;
+          this.state = 16;
           this.match(QueryParser.T__1);
           break;
-        default:
-          throw new antlr4.error.NoViableAltException(this);
+
+        case 2:
+          localctx = new FunctionExpressionContext(this, localctx);
+          this._ctx = localctx;
+          _prevctx = localctx;
+          this.state = 18;
+          this.functionCall();
+          break;
+
+        case 3:
+          localctx = new PushExpressionContext(this, localctx);
+          this._ctx = localctx;
+          _prevctx = localctx;
+          this.state = 19;
+          this.match(QueryParser.Word);
+          break;
+
+        case 4:
+          localctx = new PushExpressionContext(this, localctx);
+          this._ctx = localctx;
+          _prevctx = localctx;
+          this.state = 20;
+          this.match(QueryParser.Number);
+          break;
       }
       this._ctx.stop = this._input.LT(-1);
-      this.state = 32;
+      this.state = 37;
       this._errHandler.sync(this);
       let _alt = this._interp.adaptivePredict(this._input, 2, this._ctx);
       while (_alt != 2 && _alt != antlr4.atn.ATN.INVALID_ALT_NUMBER) {
@@ -152,38 +178,64 @@ export default class QueryParser extends antlr4.Parser {
             this.triggerExitRuleEvent();
           }
           _prevctx = localctx;
-          this.state = 30;
+          this.state = 35;
           this._errHandler.sync(this);
           var la_ = this._interp.adaptivePredict(this._input, 1, this._ctx);
           switch (la_) {
             case 1:
               localctx = new JoinExpressionContext(this, new ExpressionContext(this, _parentctx, _parentState));
               this.pushNewRecursionContext(localctx, _startState, QueryParser.RULE_expression);
-              this.state = 22;
-              if (!this.precpred(this._ctx, 3)) {
-                throw new antlr4.error.FailedPredicateException(this, "this.precpred(this._ctx, 3)");
-              }
               this.state = 23;
-              this.operator();
+              if (!this.precpred(this._ctx, 7)) {
+                throw new antlr4.error.FailedPredicateException(this, "this.precpred(this._ctx, 7)");
+              }
               this.state = 24;
-              this.expression(4);
+              localctx.operation = this.match(QueryParser.T__2);
+              this.state = 25;
+              this.expression(8);
               break;
 
             case 2:
               localctx = new JoinExpressionContext(this, new ExpressionContext(this, _parentctx, _parentState));
               this.pushNewRecursionContext(localctx, _startState, QueryParser.RULE_expression);
               this.state = 26;
-              if (!this.precpred(this._ctx, 2)) {
-                throw new antlr4.error.FailedPredicateException(this, "this.precpred(this._ctx, 2)");
+              if (!this.precpred(this._ctx, 6)) {
+                throw new antlr4.error.FailedPredicateException(this, "this.precpred(this._ctx, 6)");
               }
               this.state = 27;
-              this.operator();
+              localctx.operation = this.match(QueryParser.T__3);
               this.state = 28;
-              this.value();
+              this.expression(7);
+              break;
+
+            case 3:
+              localctx = new JoinExpressionContext(this, new ExpressionContext(this, _parentctx, _parentState));
+              this.pushNewRecursionContext(localctx, _startState, QueryParser.RULE_expression);
+              this.state = 29;
+              if (!this.precpred(this._ctx, 5)) {
+                throw new antlr4.error.FailedPredicateException(this, "this.precpred(this._ctx, 5)");
+              }
+              this.state = 30;
+              localctx.operation = this.match(QueryParser.T__4);
+              this.state = 31;
+              this.expression(6);
+              break;
+
+            case 4:
+              localctx = new JoinExpressionContext(this, new ExpressionContext(this, _parentctx, _parentState));
+              this.pushNewRecursionContext(localctx, _startState, QueryParser.RULE_expression);
+              this.state = 32;
+              if (!this.precpred(this._ctx, 4)) {
+                throw new antlr4.error.FailedPredicateException(this, "this.precpred(this._ctx, 4)");
+              }
+              this.state = 33;
+              localctx.operation = this.match(QueryParser.T__5);
+              this.state = 34;
+              this.expression(5);
               break;
           }
         }
-        this.state = 34;
+        this.state = 39;
         this._errHandler.sync(this);
         _alt = this._interp.adaptivePredict(this._input, 2, this._ctx);
       }
@@ -201,19 +253,25 @@ export default class QueryParser extends antlr4.Parser {
     return localctx;
   }
 
-  value() {
-    let localctx = new ValueContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 4, QueryParser.RULE_value);
+  arguments() {
+    let localctx = new ArgumentsContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 4, QueryParser.RULE_arguments);
     var _la = 0; // Token type
     try {
       this.enterOuterAlt(localctx, 1);
-      this.state = 35;
+      this.state = 40;
+      this.expression(0);
+      this.state = 45;
+      this._errHandler.sync(this);
       _la = this._input.LA(1);
-      if (!(_la === QueryParser.Number || _la === QueryParser.Word)) {
-        this._errHandler.recoverInline(this);
-      } else {
-        this._errHandler.reportMatch(this);
-        this.consume();
+      while (_la === QueryParser.T__6) {
+        this.state = 41;
+        this.match(QueryParser.T__6);
+        this.state = 42;
+        this.expression(0);
+        this.state = 47;
+        this._errHandler.sync(this);
+        _la = this._input.LA(1);
       }
     } catch (re) {
       if (re instanceof antlr4.error.RecognitionException) {
@@ -229,15 +287,52 @@ export default class QueryParser extends antlr4.Parser {
     return localctx;
   }
 
-  operator() {
-    let localctx = new OperatorContext(this, this._ctx, this.state);
-    this.enterRule(localctx, 6, QueryParser.RULE_operator);
+  functionCall() {
+    let localctx = new FunctionCallContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 6, QueryParser.RULE_functionCall);
     var _la = 0; // Token type
     try {
       this.enterOuterAlt(localctx, 1);
-      this.state = 37;
+      this.state = 48;
+      this.match(QueryParser.Word);
+      this.state = 49;
+      this.match(QueryParser.T__0);
+      this.state = 51;
+      this._errHandler.sync(this);
       _la = this._input.LA(1);
-      if (!(_la === QueryParser.Plus || _la === QueryParser.Minus)) {
+      if (
+        (_la & ~0x1f) == 0 &&
+        ((1 << _la) & ((1 << QueryParser.T__0) | (1 << QueryParser.Number) | (1 << QueryParser.Word))) !== 0
+      ) {
+        this.state = 50;
+        this.arguments();
+      }
+
+      this.state = 53;
+      this.match(QueryParser.T__1);
+    } catch (re) {
+      if (re instanceof antlr4.error.RecognitionException) {
+        localctx.exception = re;
+        this._errHandler.reportError(this, re);
+        this._errHandler.recover(this, re);
+      } else {
+        throw re;
+      }
+    } finally {
+      this.exitRule();
+    }
+    return localctx;
+  }
+
+  value() {
+    let localctx = new ValueContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 8, QueryParser.RULE_value);
+    var _la = 0; // Token type
+    try {
+      this.enterOuterAlt(localctx, 1);
+      this.state = 55;
+      _la = this._input.LA(1);
+      if (!(_la === QueryParser.Number || _la === QueryParser.Word)) {
         this._errHandler.recoverInline(this);
       } else {
         this._errHandler.reportMatch(this);
@@ -261,16 +356,20 @@ export default class QueryParser extends antlr4.Parser {
 QueryParser.EOF = antlr4.Token.EOF;
 QueryParser.T__0 = 1;
 QueryParser.T__1 = 2;
-QueryParser.Plus = 3;
-QueryParser.Minus = 4;
-QueryParser.Number = 5;
-QueryParser.Word = 6;
-QueryParser.SPACE = 7;
+QueryParser.T__2 = 3;
+QueryParser.T__3 = 4;
+QueryParser.T__4 = 5;
+QueryParser.T__5 = 6;
+QueryParser.T__6 = 7;
+QueryParser.Number = 8;
+QueryParser.Word = 9;
+QueryParser.SPACE = 10;
 
 QueryParser.RULE_query = 0;
 QueryParser.RULE_expression = 1;
-QueryParser.RULE_value = 2;
-QueryParser.RULE_operator = 3;
+QueryParser.RULE_arguments = 2;
+QueryParser.RULE_functionCall = 3;
+QueryParser.RULE_value = 4;
 
 class QueryContext extends antlr4.ParserRuleContext {
   constructor(parser, parent, invokingState) {
@@ -352,22 +451,8 @@ QueryParser.EmbedExpressionContext = EmbedExpressionContext;
 class JoinExpressionContext extends ExpressionContext {
   constructor(parser, ctx) {
     super(parser);
+    this.operation = null; // Token;
     super.copyFrom(ctx);
-  }
-
-  value = function (i) {
-    if (i === undefined) {
-      i = null;
-    }
-    if (i === null) {
-      return this.getTypedRuleContexts(ValueContext);
-    } else {
-      return this.getTypedRuleContext(ValueContext, i);
-    }
-  };
-
-  operator() {
-    return this.getTypedRuleContext(OperatorContext, 0);
   }
 
   expression = function (i) {
@@ -395,6 +480,131 @@ class JoinExpressionContext extends ExpressionContext {
 }
 
 QueryParser.JoinExpressionContext = JoinExpressionContext;
+
+class FunctionExpressionContext extends ExpressionContext {
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
+
+  functionCall() {
+    return this.getTypedRuleContext(FunctionCallContext, 0);
+  }
+
+  enterRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.enterFunctionExpression(this);
+    }
+  }
+
+  exitRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.exitFunctionExpression(this);
+    }
+  }
+}
+
+QueryParser.FunctionExpressionContext = FunctionExpressionContext;
+
+class PushExpressionContext extends ExpressionContext {
+  constructor(parser, ctx) {
+    super(parser);
+    super.copyFrom(ctx);
+  }
+
+  Word() {
+    return this.getToken(QueryParser.Word, 0);
+  }
+
+  Number() {
+    return this.getToken(QueryParser.Number, 0);
+  }
+
+  enterRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.enterPushExpression(this);
+    }
+  }
+
+  exitRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.exitPushExpression(this);
+    }
+  }
+}
+
+QueryParser.PushExpressionContext = PushExpressionContext;
+
+class ArgumentsContext extends antlr4.ParserRuleContext {
+  constructor(parser, parent, invokingState) {
+    if (parent === undefined) {
+      parent = null;
+    }
+    if (invokingState === undefined || invokingState === null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = QueryParser.RULE_arguments;
+  }
+
+  expression = function (i) {
+    if (i === undefined) {
+      i = null;
+    }
+    if (i === null) {
+      return this.getTypedRuleContexts(ExpressionContext);
+    } else {
+      return this.getTypedRuleContext(ExpressionContext, i);
+    }
+  };
+
+  enterRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.enterArguments(this);
+    }
+  }
+
+  exitRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.exitArguments(this);
+    }
+  }
+}
+
+class FunctionCallContext extends antlr4.ParserRuleContext {
+  constructor(parser, parent, invokingState) {
+    if (parent === undefined) {
+      parent = null;
+    }
+    if (invokingState === undefined || invokingState === null) {
+      invokingState = -1;
+    }
+    super(parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = QueryParser.RULE_functionCall;
+  }
+
+  Word() {
+    return this.getToken(QueryParser.Word, 0);
+  }
+
+  arguments() {
+    return this.getTypedRuleContext(ArgumentsContext, 0);
+  }
+
+  enterRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.enterFunctionCall(this);
+    }
+  }
+
+  exitRule(listener) {
+    if (listener instanceof QueryListener) {
+      listener.exitFunctionCall(this);
+    }
+  }
+}
 
 class ValueContext extends antlr4.ParserRuleContext {
   constructor(parser, parent, invokingState) {
@@ -430,41 +640,8 @@ class ValueContext extends antlr4.ParserRuleContext {
   }
 }
 
-class OperatorContext extends antlr4.ParserRuleContext {
-  constructor(parser, parent, invokingState) {
-    if (parent === undefined) {
-      parent = null;
-    }
-    if (invokingState === undefined || invokingState === null) {
-      invokingState = -1;
-    }
-    super(parent, invokingState);
-    this.parser = parser;
-    this.ruleIndex = QueryParser.RULE_operator;
-  }
-
-  Plus() {
-    return this.getToken(QueryParser.Plus, 0);
-  }
-
-  Minus() {
-    return this.getToken(QueryParser.Minus, 0);
-  }
-
-  enterRule(listener) {
-    if (listener instanceof QueryListener) {
-      listener.enterOperator(this);
-    }
-  }
-
-  exitRule(listener) {
-    if (listener instanceof QueryListener) {
-      listener.exitOperator(this);
-    }
-  }
-}
-
 QueryParser.QueryContext = QueryContext;
 QueryParser.ExpressionContext = ExpressionContext;
+QueryParser.ArgumentsContext = ArgumentsContext;
+QueryParser.FunctionCallContext = FunctionCallContext;
 QueryParser.ValueContext = ValueContext;
-QueryParser.OperatorContext = OperatorContext;
